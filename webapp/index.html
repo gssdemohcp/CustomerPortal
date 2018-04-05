@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+        <title>CPD (Copy)</title>
+
+		<script id="sap-ui-bootstrap"
+			src="/resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_belize"
+            data-sap-ui-xx-supportedLanguages="en"
+            data-sap-ui-xx-bindingSyntax="complex"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{"generated.app": ""}'>
+		</script>
+		
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<style type="text/css">.sapUiUfdShellBrand {background-color:#ED5A3B !important;}</style>
+		<style type="text/css">.sapUiUfdShellHeader {background-color:#ED5A3B !important;}</style>
+		<style type="text/css">.sapUiUfdShellHeadItm {color:#030303 !important;}</style>
+		<style type="text/css">.sapMTitleStyleH3 {color:#FCFBFB !important;}</style>
+		<style type="text/css">.sapUiUfdShellHeadUsrItm {color:#030303 !important;}</style>
+		<style type="text/css">.sap_Responsive_Page_0-content-sap_m_List-1478695776606-items-sap_m_StandardListItem-1478695989890{font-size:10px !important;}</style>
+		<style type="text/css">.sapMSLITitle{font-size:12px !important;}</style>
+		<style type="text/css">.sapMSLIDescription{font-size:10px !important;}</style>
+		<style type="text/css">.sapMSLIInfo{font-size:10px !important;}</style>
+		<style type="text/css">.sapMImg{margin-top:27px !important;}</style>
+		<style type="text/css">.sapUiUfdShellHeadItm>span>img{width:50px !important; height:30px !important; margin-top:4px !important; }</style>
+		<style type="text/css">.page{display:block; margin: 0 auto; background-color:#172E63; margin-top:1%; !important; }</style>
+		
+		<style type="text/css">.globalimg{display:block; margin: 0 auto; !important; }</style>
+		<style type="text/css">.sapMTitleStyleH2{font-size:3.5rem !important; margin-top:30%; !important; }</style>
+		<style type="text/css">.input1{display:block; margin: 0 auto; margin-top:15%; !important; }</style>
+		<style type="text/css">.input2{display:block; margin: 0 auto; !important; }</style>
+		<style type="text/css">.loginbtn{display:block; margin: 0 auto;  !important; }</style>
+		<style type="text/css">.poweredtext{display:block; margin: 0 auto; margin-top:16%; color:#F46716; !important; }</style>
+		<style type="text/css">.sapMText{font-size:0.975rem; !important; }</style>
+		<style id="sap_Responsive_Page_0-content-sap_m_StandardTile-1478530819675" type="text/css">
+			body {height:20px; !important; }
+		</style>
+		<style type="text/css">.sapMInputBaseInner {
+			color: #4073AD;
+		    background: #ffffff;
+		    border: 1px solid #bfbfbf;
+		    font-size: 0.875rem;
+		    font-family: Arial,Helvetica,sans-serif;
+		    line-height: normal;
+		    height: 2.5rem;
+		    padding: 0 0.75rem;
+			!important;}
+		</style>
+		
+		
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				jQuery.sap.require("sap.ui.fl.FakeLrepConnector");
+				sap.ui.fl.FakeLrepConnector.enableFakeConnector("fakeLRep.json");
+				var sNamespase = "generated.app";
+				sNamespase = sNamespase.replace(".", "/");
+				sap.ui.require([
+					sNamespase + "/localService/mockserver"
+				], function (server) {
+					// set up test service for local testing
+					server.init();
+
+					new sap.m.Shell({
+						app: new sap.ui.core.ComponentContainer({
+							height : "100%",
+							name : "generated.app"
+						})
+					}).placeAt("content");
+				});
+			});
+		</script>
+	</head>
+
+	<body class="sapUiBody" id="content" rootUiArea >
+	</body>
+
+</html>

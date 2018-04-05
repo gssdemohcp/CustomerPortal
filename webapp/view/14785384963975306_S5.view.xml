@@ -1,0 +1,371 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="generated.app.controller.14785384963975306_S5" xmlns:m="sap.m"
+	xmlns:u="sap.ui.unified" xmlns:tnt="sap.tnt">
+	<u:Shell id="myShell" icon="{/logo}" headerVisible="true">
+		<u:headItems>
+			<u:ShellHeadItem tooltip="Configuration" icon="sap-icon://menu2" press="handlePressConfiguration"/>
+			<u:ShellHeadItem tooltip="Home" icon="/webapp/resources/logo.png" visible="true" press="handlePressHome"/>
+		</u:headItems>
+		<u:headEndItems>
+			<u:ShellHeadItem icon="sap-icon://log" tooltip="Logoff" press="handleLogoffPress"/>
+		</u:headEndItems>
+		<u:user>
+			<u:ShellHeadUserItem image="sap-icon://person-placeholder" username="GlobalSoft Inc" press="handleUserNamePress"/>
+		</u:user>
+		<u:search>
+			<m:Image tooltip="Home" src="/webapp/resources/logo.png" visible="true" id="logo"/>
+			<m:Title text="Customer Service Portal" textAlign="Center" titleStyle="H3"/>
+		</u:search>
+		<u:paneContent>
+			<tnt:SideNavigation id="sideNavigation">
+				<tnt:fixedItem>
+					<tnt:NavigationList>
+						<tnt:NavigationListItem text="Maintenance Plans" icon="sap-icon://wrench" select="handleLinkPress"/>
+						<tnt:NavigationListItem text="Open Tickets" icon="sap-icon://open-folder" select="_onStandardTilePress"></tnt:NavigationListItem>
+						<tnt:NavigationListItem text="In Process Tickets" icon="sap-icon://status-in-process" select="_onStandardTilePress1"></tnt:NavigationListItem>
+						<tnt:NavigationListItem text="Completed Tickets" icon="sap-icon://status-completed" select="_onStandardTilePress2"></tnt:NavigationListItem>
+						<tnt:NavigationListItem text="Asset Base" icon="sap-icon://building" select="_onImagePress"></tnt:NavigationListItem>
+						<!--<tnt:NavigationListItem text="Analytics" icon="sap-icon://line-chart"></tnt:NavigationListItem>-->
+						<!--<tnt:NavigationListItem text="Messages" icon="sap-icon://inbox"></tnt:NavigationListItem>-->
+					</tnt:NavigationList>
+				</tnt:fixedItem>
+			</tnt:SideNavigation>
+		</u:paneContent>
+		<m:Page id="sap_Responsive_Page_0" showHeader="true" title="Ticket Management" showFooter="false" showNavButton="true"
+			navButtonPress="_onPageNavButtonPress" class="page5">
+			<m:content>
+				<m:SearchField id="sap_Responsive_Page_0-content-sap_m_SearchField-1478538772049" placeholder="Search by Service Order"
+					showSearchButton="true" visible="true" width="auto"/>
+				<m:SearchField id="sap_Responsive_Page_0-content-sap_m_SearchField-1478538784357" placeholder="Search by Serial ID" showSearchButton="true"
+					visible="true" width="auto"/>
+				<m:IconTabBar id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698" selectedKey="Ok" applyContentPadding="false"
+					expandable="false" expanded="true" backgroundDesign="Solid" upperCase="false" visible="true">
+					<m:items>
+						<m:IconTabFilter id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1" iconDensityAware="false"
+							icon="sap-icon://open-folder" iconColor="Default" text="Open" count="" design="Vertical" showAll="false" textDirection="Inherit"
+							enabled="true" visible="true">
+							<m:content>
+								<m:Table id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1-content-build_simple_Table-1"
+									width="100%" noDataText="No data" mode="None" showSeparators="All" growing="false" growingThreshold="20" growingScrollToLoad="false"
+									items="{/openSet}">
+									<m:headerToolbar/>
+									<m:columns>
+										<m:Column
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1-content-build_simple_Table-1-columns-build_simple_Column-1"
+											width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+											<m:header>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1-content-build_simple_Table-1-columns-build_simple_Column-1-header-sap_m_Text-1"
+													text="Service Order" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:header>
+											<m:footer/>
+										</m:Column>
+										<m:Column
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1-content-build_simple_Table-1-columns-build_simple_Column-2"
+											width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+											<m:header>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1-content-build_simple_Table-1-columns-build_simple_Column-2-header-sap_m_Text-1"
+													text="Product" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:header>
+											<m:footer/>
+										</m:Column>
+										<m:Column
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1-content-build_simple_Table-1-columns-build_simple_Column-3"
+											width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+											<m:header>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1-content-build_simple_Table-1-columns-build_simple_Column-3-header-sap_m_Text-1"
+													text="Serial ID" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:header>
+											<m:footer/>
+										</m:Column>
+										<m:Column
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1-content-build_simple_Table-1-columns-build_simple_Column-1478538487506"
+											width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+											<m:header>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1-content-build_simple_Table-1-columns-build_simple_Column-1478538487506-header-sap_m_Text-1"
+													text="Status" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:header>
+											<m:footer/>
+										</m:Column>
+									</m:columns>
+									<m:items>
+										<m:ColumnListItem
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1-content-build_simple_Table-1-items-build_simple_Row-1"
+											type="Navigation" press="_onRowPress2">
+											<m:cells>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1-content-build_simple_Table-1-items-build_simple_Row-1-cells-build_simple_TableCell-1478596042344-content-sap_m_Text-1478596060471"
+													text="{ID}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1-content-build_simple_Table-1-items-build_simple_Row-1-cells-build_simple_TableCell-1478596042334-content-sap_m_Text-1478596063131"
+													text="{ProductID}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1-content-build_simple_Table-1-items-build_simple_Row-1-cells-build_simple_TableCell-1478596042341-content-sap_m_Text-1478596069968"
+													text="{SerialID}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1-content-build_simple_Table-1-items-build_simple_Row-1-cells-build_simple_TableCell-1478596042338-content-sap_m_Text-1478596074125"
+													text="{Status}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:cells>
+										</m:ColumnListItem>
+									</m:items>
+								</m:Table>
+							</m:content>
+						</m:IconTabFilter>
+						<m:IconTabSeparator id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabSeparator-2"
+							iconDensityAware="false" icon=""/>
+						<m:IconTabFilter id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-3" iconDensityAware="false"
+							icon="sap-icon://status-in-process" iconColor="Critical" text="In Process" count="" design="Vertical" showAll="false"
+							textDirection="Inherit" enabled="true" visible="true">
+							<m:content>
+								<m:Table
+									id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-3-content-build_simple_Table-1478597327913"
+									width="100%" noDataText="No data" mode="None" showSeparators="All" growing="false" growingThreshold="20" growingScrollToLoad="false"
+									items="{/inprocessSet}">
+									<m:headerToolbar/>
+									<m:columns>
+										<m:Column
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-3-content-build_simple_Table-1478597327913-columns-build_simple_Column-1"
+											width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+											<m:header>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-3-content-build_simple_Table-1478597327913-columns-build_simple_Column-1-header-sap_m_Text-1"
+													text="Service Order" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:header>
+											<m:footer/>
+										</m:Column>
+										<m:Column
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-3-content-build_simple_Table-1478597327913-columns-build_simple_Column-2"
+											width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+											<m:header>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-3-content-build_simple_Table-1478597327913-columns-build_simple_Column-2-header-sap_m_Text-1"
+													text="Product" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:header>
+											<m:footer/>
+										</m:Column>
+										<m:Column
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-3-content-build_simple_Table-1478597327913-columns-build_simple_Column-3"
+											width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+											<m:header>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-3-content-build_simple_Table-1478597327913-columns-build_simple_Column-3-header-sap_m_Text-1"
+													text="Serial ID" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:header>
+											<m:footer/>
+										</m:Column>
+										<m:Column
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-3-content-build_simple_Table-1478597327913-columns-build_simple_Column-1478597409376"
+											width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+											<m:header>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-3-content-build_simple_Table-1478597327913-columns-build_simple_Column-1478597409376-header-sap_m_Text-1"
+													text="Status" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:header>
+											<m:footer/>
+										</m:Column>
+									</m:columns>
+									<m:items>
+										<m:ColumnListItem
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-3-content-build_simple_Table-1478597327913-items-build_simple_Row-1"
+											type="Navigation">
+											<m:cells>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-3-content-build_simple_Table-1478597327913-items-build_simple_Row-1-cells-build_simple_TableCell-1478597360554-content-sap_m_Text-1478597422623"
+													text="{ID}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-3-content-build_simple_Table-1478597327913-items-build_simple_Row-1-cells-build_simple_TableCell-1478597360552-content-sap_m_Text-1478597426095"
+													text="{ProductID}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-3-content-build_simple_Table-1478597327913-items-build_simple_Row-1-cells-build_simple_TableCell-1478597360553-content-sap_m_Text-1478597429978"
+													text="{SerialID}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-3-content-build_simple_Table-1478597327913-items-build_simple_Row-1-cells-build_simple_TableCell-1478597409379-content-sap_m_Text-1478597462047"
+													text="{Status}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:cells>
+										</m:ColumnListItem>
+									</m:items>
+								</m:Table>
+							</m:content>
+						</m:IconTabFilter>
+						<m:IconTabSeparator id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabSeparator-4"
+							iconDensityAware="false" icon=""/>
+						<m:IconTabFilter id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-5" iconDensityAware="false"
+							icon="sap-icon://status-completed" iconColor="Positive" text="Completed" count="" design="Vertical" showAll="false" textDirection="Inherit"
+							enabled="true" visible="true">
+							<m:content>
+								<m:Text id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-5-content-sap_m_Text-1478597565988"
+									text="" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Table
+									id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-5-content-build_simple_Table-1478597654782"
+									width="100%" noDataText="No data" mode="None" showSeparators="All" growing="false" growingThreshold="20" growingScrollToLoad="false"
+									items="{/competedSet}">
+									<m:headerToolbar/>
+									<m:columns>
+										<m:Column
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-5-content-build_simple_Table-1478597654782-columns-build_simple_Column-1"
+											width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+											<m:header>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-5-content-build_simple_Table-1478597654782-columns-build_simple_Column-1-header-sap_m_Text-1"
+													text="Service Order" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:header>
+											<m:footer/>
+										</m:Column>
+										<m:Column
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-5-content-build_simple_Table-1478597654782-columns-build_simple_Column-2"
+											width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+											<m:header>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-5-content-build_simple_Table-1478597654782-columns-build_simple_Column-2-header-sap_m_Text-1"
+													text="Product" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:header>
+											<m:footer/>
+										</m:Column>
+										<m:Column
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-5-content-build_simple_Table-1478597654782-columns-build_simple_Column-3"
+											width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+											<m:header>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-5-content-build_simple_Table-1478597654782-columns-build_simple_Column-3-header-sap_m_Text-1"
+													text="Serial ID" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:header>
+											<m:footer/>
+										</m:Column>
+										<m:Column
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-5-content-build_simple_Table-1478597654782-columns-build_simple_Column-1478597697774"
+											width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+											<m:header>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-5-content-build_simple_Table-1478597654782-columns-build_simple_Column-1478597697774-header-sap_m_Text-1"
+													text="Status" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:header>
+											<m:footer/>
+										</m:Column>
+									</m:columns>
+									<m:items>
+										<m:ColumnListItem
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-5-content-build_simple_Table-1478597654782-items-build_simple_Row-1"
+											type="Navigation">
+											<m:cells>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-5-content-build_simple_Table-1478597654782-items-build_simple_Row-1-cells-build_simple_TableCell-1478597713819-content-sap_m_Text-1478597722172"
+													text="{ID}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-5-content-build_simple_Table-1478597654782-items-build_simple_Row-1-cells-build_simple_TableCell-1478597713816-content-sap_m_Text-1478597724487"
+													text="{ProductID}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-5-content-build_simple_Table-1478597654782-items-build_simple_Row-1-cells-build_simple_TableCell-1478597713818-content-sap_m_Text-1478597727444"
+													text="{SerialID}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-5-content-build_simple_Table-1478597654782-items-build_simple_Row-1-cells-build_simple_TableCell-1478597713817-content-sap_m_Text-1478597743337"
+													text="{Status}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:cells>
+										</m:ColumnListItem>
+									</m:items>
+								</m:Table>
+							</m:content>
+						</m:IconTabFilter>
+						<m:IconTabSeparator id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabSeparator-1478538831444"
+							iconDensityAware="false" icon=""/>
+						<m:IconTabFilter id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1478538678647"
+							iconDensityAware="false" icon="sap-icon://list" iconColor="Default" text="All" count="" design="Vertical" showAll="false"
+							textDirection="Inherit" enabled="true" visible="true">
+							<m:content>
+								<m:Table
+									id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1478538678647-content-build_simple_Table-1478597833641"
+									width="100%" noDataText="No data" mode="None" showSeparators="All" growing="false" growingThreshold="20" growingScrollToLoad="false"
+									items="{/allSet}">
+									<m:headerToolbar/>
+									<m:columns>
+										<m:Column
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1478538678647-content-build_simple_Table-1478597833641-columns-build_simple_Column-1"
+											width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+											<m:header>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1478538678647-content-build_simple_Table-1478597833641-columns-build_simple_Column-1-header-sap_m_Text-1"
+													text="Service Order" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:header>
+											<m:footer/>
+										</m:Column>
+										<m:Column
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1478538678647-content-build_simple_Table-1478597833641-columns-build_simple_Column-2"
+											width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+											<m:header>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1478538678647-content-build_simple_Table-1478597833641-columns-build_simple_Column-2-header-sap_m_Text-1"
+													text="Product" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:header>
+											<m:footer/>
+										</m:Column>
+										<m:Column
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1478538678647-content-build_simple_Table-1478597833641-columns-build_simple_Column-3"
+											width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+											<m:header>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1478538678647-content-build_simple_Table-1478597833641-columns-build_simple_Column-3-header-sap_m_Text-1"
+													text="Serial ID" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:header>
+											<m:footer/>
+										</m:Column>
+										<m:Column
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1478538678647-content-build_simple_Table-1478597833641-columns-build_simple_Column-1478597884760"
+											width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+											<m:header>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1478538678647-content-build_simple_Table-1478597833641-columns-build_simple_Column-1478597884760-header-sap_m_Text-1"
+													text="Status" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:header>
+											<m:footer/>
+										</m:Column>
+									</m:columns>
+									<m:items>
+										<m:ColumnListItem
+											id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1478538678647-content-build_simple_Table-1478597833641-items-build_simple_Row-1"
+											type="Navigation">
+											<m:cells>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1478538678647-content-build_simple_Table-1478597833641-items-build_simple_Row-1-cells-build_simple_TableCell-1478601858430-content-sap_m_Text-1478601969648"
+													text="{ID}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1478538678647-content-build_simple_Table-1478597833641-items-build_simple_Row-1-cells-build_simple_TableCell-1478601858426-content-sap_m_Text-1478601972444"
+													text="{ProductID}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1478538678647-content-build_simple_Table-1478597833641-items-build_simple_Row-1-cells-build_simple_TableCell-1478601858429-content-sap_m_Text-1478601977063"
+													text="{SerialID}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+												<m:Text
+													id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478538377698-items-sap_m_IconTabFilter-1478538678647-content-build_simple_Table-1478597833641-items-build_simple_Row-1-cells-build_simple_TableCell-1478601858427-content-sap_m_Text-1478601981684"
+													text="{Status}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+											</m:cells>
+										</m:ColumnListItem>
+									</m:items>
+								</m:Table>
+							</m:content>
+						</m:IconTabFilter>
+					</m:items>
+					<m:content/>
+				</m:IconTabBar>
+				<m:Text id="sap_Responsive_Page_0-content-sap_m_Text-1478597441473" text="" width="auto" maxLines="1" wrapping="false" textAlign="Begin"
+					textDirection="Inherit"/>
+			</m:content>
+			<m:footer>
+				<m:Bar id="sap_Responsive_Page_0-footer-sap_m_Bar-1" design="Auto">
+					<m:contentLeft/>
+					<m:contentMiddle/>
+					<m:contentRight>
+						<m:Button id="sap_Responsive_Page_0-footer-sap_m_Bar-1-contentRight-sap_m_Button-1" iconDensityAware="false" text="Approve" type="Accept"
+							iconFirst="true" width="auto" enabled="true" visible="true"/>
+						<m:Button id="sap_Responsive_Page_0-footer-sap_m_Bar-1-contentRight-sap_m_Button-2" iconDensityAware="false" text="Reject" type="Reject"
+							iconFirst="true" width="auto" enabled="true" visible="true"/>
+						<m:Button id="sap_Responsive_Page_0-footer-sap_m_Bar-1-contentRight-sap_m_Button-3" iconDensityAware="false" text="" type="Default"
+							icon="sap-icon://action" iconFirst="true" width="auto" enabled="true" visible="true"/>
+					</m:contentRight>
+				</m:Bar>
+			</m:footer>
+			<m:headerContent/>
+			<m:subHeader/>
+			<m:customHeader/>
+		</m:Page>
+	</u:Shell>
+</mvc:View>

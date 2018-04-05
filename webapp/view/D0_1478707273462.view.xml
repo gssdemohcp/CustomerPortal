@@ -1,0 +1,19 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="generated.app.controller.D0_1478707273462" xmlns:m="sap.m">
+	<m:Dialog id="sap_m_Dialog_0" title="Ticket Confirmation" horizontalScrolling="true" showHeader="true" state="None" stretch="false"
+		type="Message" verticalScrolling="true" afterClose="_onDialogAfterClose">
+		<m:content>
+			<m:Text id="sap_m_Dialog_0-content-sap_m_Text-1478707236926" text="Are you sure you want to create a new ticket ?" width="374px"
+				maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+		</m:content>
+		<m:beginButton/>
+		<m:buttons>
+			<m:Button id="sap_m_Dialog_0-buttons-sap_m_Button-1" iconDensityAware="false" text="Yes" type="Accept" iconFirst="true" width="auto"
+				enabled="true" visible="true" press="_onButtonPress"/>
+			<m:Button id="sap_m_Dialog_0-buttons-sap_m_Button-2" iconDensityAware="false" text="No" type="Reject" iconFirst="true" width="auto"
+				enabled="true" visible="true" press="_onButtonPress1"/>
+		</m:buttons>
+		<m:customHeader/>
+		<m:endButton/>
+		<m:subHeader/>
+	</m:Dialog>
+</mvc:View>

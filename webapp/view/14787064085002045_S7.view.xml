@@ -1,0 +1,119 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="generated.app.controller.14787064085002045_S7" xmlns:m="sap.m"
+	xmlns:f="sap.ui.layout.form" xmlns:u="sap.ui.unified" xmlns:tnt="sap.tnt">
+	<u:Shell id="myShell" icon="{/logo}" headerVisible="true">
+		<u:headItems>
+			<u:ShellHeadItem tooltip="Configuration" icon="sap-icon://menu2" press="handlePressConfiguration"/>
+			<u:ShellHeadItem tooltip="Home" icon="/webapp/resources/logo.png" visible="true" press="handlePressHome"/>
+		</u:headItems>
+		<u:headEndItems>
+			<u:ShellHeadItem icon="sap-icon://log" tooltip="Logoff" press="handleLogoffPress"/>
+		</u:headEndItems>
+		<u:user>
+			<u:ShellHeadUserItem image="sap-icon://person-placeholder" username="GlobalSoft Inc" press="handleUserNamePress"/>
+		</u:user>
+		<u:search>
+			<m:Image tooltip="Home" src="/webapp/resources/logo.png" visible="true" id="logo"/>
+			<m:Title text="Customer Service Portal" textAlign="Center" titleStyle="H3"/>
+		</u:search>
+		<u:paneContent>
+			<tnt:SideNavigation id="sideNavigation">
+				<tnt:fixedItem>
+					<tnt:NavigationList>
+						<tnt:NavigationListItem text="Maintenance Plans" icon="sap-icon://wrench" select="handleLinkPress"/>
+						<tnt:NavigationListItem text="Open Tickets" icon="sap-icon://open-folder" select="_onStandardTilePress"></tnt:NavigationListItem>
+						<tnt:NavigationListItem text="In Process Tickets" icon="sap-icon://status-in-process" select="_onStandardTilePress1"></tnt:NavigationListItem>
+						<tnt:NavigationListItem text="Completed Tickets" icon="sap-icon://status-completed" select="_onStandardTilePress2"></tnt:NavigationListItem>
+						<tnt:NavigationListItem text="Asset Base" icon="sap-icon://building" select="_onImagePress"></tnt:NavigationListItem>
+						<!--<tnt:NavigationListItem text="Analytics" icon="sap-icon://line-chart"></tnt:NavigationListItem>-->
+						<!--<tnt:NavigationListItem text="Messages" icon="sap-icon://inbox"></tnt:NavigationListItem>-->
+					</tnt:NavigationList>
+				</tnt:fixedItem>
+			</tnt:SideNavigation>
+		</u:paneContent>
+		<m:Page id="sap_Responsive_Page_0" showHeader="true" title="Ticket Creation" showFooter="true" showNavButton="true"
+			navButtonPress="_onPageNavButtonPress" class="page7">
+			<!--<m:content>-->
+			<f:Form id="sap_Responsive_Page_0-content-sap_ui_layout_form_Form-1478706407379" width="880px" visible="true">
+				<f:layout>
+					<f:ResponsiveGridLayout/>
+				</f:layout>
+				<f:formContainers>
+					<f:FormContainer ariaLabelledBy="Title2">
+						<!--<f:toolbar>-->
+						<!--	<m:Toolbar>-->
+						<!--		<m:Title id="Title2" text="" level="H5" titleStyle="H5"/>-->
+						<!--	</m:Toolbar>-->
+						<!--</f:toolbar>-->
+						<f:formElements>
+							<f:FormElement label="Serial ID">
+								<f:fields>
+									<m:Input value="WH10009108" id="SerialID" width="50%"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="Product ID">
+								<f:fields>
+									<m:Input value="POWER_WHEEL_CHAIR" width="50%"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="Customer ID">
+								<f:fields>
+									<m:Input value="1001192" width="50%"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="Warranty From">
+								<f:fields>
+									<m:DatePicker id="sap_Responsive_Page_0-content-sap_m_DatePicker-1478706745019" displayFormat="MMM dd, yyyy" value="7/1/16, 12.00AM"
+										enabled="true" visible="true" width="50%"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="Warranty To">
+								<f:fields>
+									<m:DatePicker id="sap_Responsive_Page_0-content-sap_m_DatePicker-1478706791543" displayFormat="MMM dd, yyyy" value="7/1/16, 12.00AM"
+										enabled="true" visible="true" width="50%"/>
+								</f:fields>
+							</f:FormElement>
+						</f:formElements>
+					</f:FormContainer>
+				</f:formContainers>
+			</f:Form>
+			<!--<m:Label id="sap_Responsive_Page_0-content-sap_m_Label-1478706531676" text="Serial ID" design="Standard" width="auto" required="false"-->
+			<!--	textAlign="Left" textDirection="Inherit"/>-->
+			<!--<m:Input id="sap_Responsive_Page_0-content-sap_m_Input-1478706613434" type="Text" value="WH10009108" showValueHelp="false" enabled="true"-->
+			<!--	visible="true" width="80%" valueHelpOnly="false" maxLength="0"/>-->
+			<!--<m:Label id="sap_Responsive_Page_0-content-sap_m_Label-1478706640624" text="Product ID" design="Standard" width="auto" required="false"-->
+			<!--	textAlign="Left" textDirection="Inherit"/>-->
+			<!--<m:Input id="sap_Responsive_Page_0-content-sap_m_Input-1478706664873" type="Text" value="POWER_WHEEL_CHAIR" showValueHelp="false"-->
+			<!--	enabled="true" visible="true" width="80%" valueHelpOnly="false" maxLength="0"/>-->
+			<!--<m:Label id="sap_Responsive_Page_0-content-sap_m_Label-1478706677852" text="Customer ID" design="Standard" width="auto" required="false"-->
+			<!--	textAlign="Left" textDirection="Inherit"/>-->
+			<!--<m:Input id="sap_Responsive_Page_0-content-sap_m_Input-1478706692351" type="Text" value="1001192" showValueHelp="false" enabled="true"-->
+			<!--	visible="true" width="80%" valueHelpOnly="false" maxLength="0"/>-->
+			<!--<m:Label id="sap_Responsive_Page_0-content-sap_m_Label-1478706712912" text="Warranty From" design="Standard" width="auto" required="false"-->
+			<!--	textAlign="Left" textDirection="Inherit"/>-->
+			<!--<m:DatePicker id="sap_Responsive_Page_0-content-sap_m_DatePicker-1478706745019" displayFormat="MMM dd, yyyy" value="7/1/16, 12.00AM"-->
+			<!--	enabled="true" visible="true" width="80%"/>-->
+			<!--<m:Label id="sap_Responsive_Page_0-content-sap_m_Label-1478706770101" text="Warranty To" design="Standard" width="auto" required="false"-->
+			<!--	textAlign="Left" textDirection="Inherit"/>-->
+			<!--<m:DatePicker id="sap_Responsive_Page_0-content-sap_m_DatePicker-1478706791543" displayFormat="MMM dd, yyyy" value="7/1/16, 12.00AM"-->
+			<!--	enabled="true" visible="true" width="80%"/>-->
+			<!--</m:content>-->
+			<m:footer>
+				<m:Bar id="sap_Responsive_Page_0-footer-sap_m_Bar-1" design="Auto">
+					<m:contentLeft/>
+					<m:contentMiddle/>
+					<m:contentRight>
+						<m:Button id="sap_Responsive_Page_0-footer-sap_m_Bar-1-contentRight-sap_m_Button-1" iconDensityAware="false" text="Create" type="Accept"
+							iconFirst="true" width="auto" enabled="true" visible="true" press="_onButtonPress2"/>
+						<m:Button id="sap_Responsive_Page_0-footer-sap_m_Bar-1-contentRight-sap_m_Button-2" iconDensityAware="false" text="Reject" type="Reject"
+							iconFirst="true" width="auto" enabled="true" visible="true" press="_onButtonPress3"/>
+						<m:Button id="sap_Responsive_Page_0-footer-sap_m_Bar-1-contentRight-sap_m_Button-3" iconDensityAware="false" text="" type="Default"
+							icon="sap-icon://action" iconFirst="true" width="auto" enabled="true" visible="true"/>
+					</m:contentRight>
+				</m:Bar>
+			</m:footer>
+			<m:headerContent/>
+			<m:subHeader/>
+			<m:customHeader/>
+		</m:Page>
+	</u:Shell>
+</mvc:View>

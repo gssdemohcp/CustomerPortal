@@ -1,0 +1,122 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="generated.app.controller.14785369375718072_S4" xmlns:m="sap.m"
+	xmlns:u="sap.ui.unified" xmlns:tnt="sap.tnt">
+	<u:Shell id="myShell" icon="{/logo}" headerVisible="true">
+		<u:headItems>
+			<u:ShellHeadItem tooltip="Configuration" icon="sap-icon://menu2" press="handlePressConfiguration"/>
+			<u:ShellHeadItem tooltip="Home" icon="/webapp/resources/logo.png" visible="true" press="handlePressHome"/>
+		</u:headItems>
+		<u:headEndItems>
+			<u:ShellHeadItem icon="sap-icon://log" tooltip="Logoff" press="handleLogoffPress"/>
+		</u:headEndItems>
+		<u:user>
+			<u:ShellHeadUserItem image="sap-icon://person-placeholder" username="GlobalSoft Inc" press="handleUserNamePress"/>
+		</u:user>
+		<u:search>
+			<m:Image tooltip="Home" src="/webapp/resources/logo.png" visible="true" id="logo"/>
+			<m:Title text="Customer Service Portal" textAlign="Center" titleStyle="H3"/>
+		</u:search>
+		<u:paneContent>
+			<tnt:SideNavigation id="sideNavigation">
+				<tnt:fixedItem>
+					<tnt:NavigationList>
+						<tnt:NavigationListItem text="Maintenance Plans" icon="sap-icon://wrench" select="handleLinkPress"/>
+						<tnt:NavigationListItem text="Open Tickets" icon="sap-icon://open-folder" select="_onStandardTilePress"></tnt:NavigationListItem>
+						<tnt:NavigationListItem text="In Process Tickets" icon="sap-icon://status-in-process" select="_onStandardTilePress1"></tnt:NavigationListItem>
+						<tnt:NavigationListItem text="Completed Tickets" icon="sap-icon://status-completed" select="_onStandardTilePress2"></tnt:NavigationListItem>
+						<tnt:NavigationListItem text="Asset Base" icon="sap-icon://building" select="_onImagePress"></tnt:NavigationListItem>
+						<!--<tnt:NavigationListItem text="Analytics" icon="sap-icon://line-chart"></tnt:NavigationListItem>-->
+						<!--<tnt:NavigationListItem text="Messages" icon="sap-icon://inbox"></tnt:NavigationListItem>-->
+					</tnt:NavigationList>
+				</tnt:fixedItem>
+			</tnt:SideNavigation>
+		</u:paneContent>
+		<m:Page id="sap_Responsive_Page_0" showHeader="true" title="Asset Base Details" showFooter="false" showNavButton="true"
+			navButtonPress="_onPageNavButtonPress" class="page4">
+			<m:content>
+				<m:Table id="sap_Responsive_Page_0-content-build_simple_Table-1478536775836" width="100%" noDataText="No data" mode="SingleSelectMaster"
+					showSeparators="All" growing="false" growingThreshold="20" growingScrollToLoad="false" items="{/microSet}" itemPress="_onTableItemPress1">
+					<m:headerToolbar/>
+					<m:columns>
+						<m:Column id="sap_Responsive_Page_0-content-build_simple_Table-1478536775836-columns-build_simple_Column-1" width="auto" hAlign="Left"
+							vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+							<m:header>
+								<m:Text id="sap_Responsive_Page_0-content-build_simple_Table-1478536775836-columns-build_simple_Column-1-header-sap_m_Text-1" text="ID"
+									width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+							</m:header>
+							<m:footer/>
+						</m:Column>
+						<m:Column id="sap_Responsive_Page_0-content-build_simple_Table-1478536775836-columns-build_simple_Column-2" width="auto" hAlign="Left"
+							vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+							<m:header>
+								<m:Text id="sap_Responsive_Page_0-content-build_simple_Table-1478536775836-columns-build_simple_Column-2-header-sap_m_Text-1"
+									text="Serial ID" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+							</m:header>
+							<m:footer/>
+						</m:Column>
+						<m:Column id="sap_Responsive_Page_0-content-build_simple_Table-1478536775836-columns-build_simple_Column-3" width="auto" hAlign="Left"
+							vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+							<m:header>
+								<m:Text id="sap_Responsive_Page_0-content-build_simple_Table-1478536775836-columns-build_simple_Column-3-header-sap_m_Text-1" text="Status"
+									width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+							</m:header>
+							<m:footer/>
+						</m:Column>
+						<m:Column id="sap_Responsive_Page_0-content-build_simple_Table-1478536775836-columns-build_simple_Column-1478537206825" width="auto"
+							hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+							<m:header>
+								<m:Text id="sap_Responsive_Page_0-content-build_simple_Table-1478536775836-columns-build_simple_Column-1478537206825-header-sap_m_Text-1"
+									text="Warranty From" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+							</m:header>
+							<m:footer/>
+						</m:Column>
+						<m:Column id="sap_Responsive_Page_0-content-build_simple_Table-1478536775836-columns-build_simple_Column-1478537207819" width="auto"
+							hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+							<m:header>
+								<m:Text id="sap_Responsive_Page_0-content-build_simple_Table-1478536775836-columns-build_simple_Column-1478537207819-header-sap_m_Text-1"
+									text="Warranty To" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+							</m:header>
+							<m:footer/>
+						</m:Column>
+					</m:columns>
+					<m:items>
+						<m:ColumnListItem id="sap_Responsive_Page_0-content-build_simple_Table-1478536775836-items-build_simple_Row-1" type="Active">
+							<m:cells>
+								<m:Text
+									id="sap_Responsive_Page_0-content-build_simple_Table-1478536775836-items-build_simple_Row-1-cells-build_simple_TableCell-1478537275265-content-sap_m_Text-1478537280621"
+									text="{ID}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Text id="sap_Responsive_Page_0-content-build_simple_Table-1478536775836-items-build_simple_Row-1-cells-sap_m_Text-2" text="{SerialID}"
+									width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Text
+									id="sap_Responsive_Page_0-content-build_simple_Table-1478536775836-items-build_simple_Row-1-cells-build_simple_TableCell-1478537235133-content-sap_m_Text-1478537283152"
+									text="{Status}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Text
+									id="sap_Responsive_Page_0-content-build_simple_Table-1478536775836-items-build_simple_Row-1-cells-build_simple_TableCell-1478537206826-content-sap_m_Text-1478537285564"
+									text="{WarrantyFrom}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Text
+									id="sap_Responsive_Page_0-content-build_simple_Table-1478536775836-items-build_simple_Row-1-cells-build_simple_TableCell-1478537207820-content-sap_m_Text-1478537288551"
+									text="{WarrantyTo}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+							</m:cells>
+						</m:ColumnListItem>
+					</m:items>
+				</m:Table>
+			</m:content>
+			<m:footer>
+				<m:Bar id="sap_Responsive_Page_0-footer-sap_m_Bar-1" design="Auto">
+					<m:contentLeft/>
+					<m:contentMiddle/>
+					<m:contentRight>
+						<m:Button id="sap_Responsive_Page_0-footer-sap_m_Bar-1-contentRight-sap_m_Button-1" iconDensityAware="false" text="Create" type="Accept"
+							iconFirst="true" width="auto" enabled="true" visible="true" press="_onButtonPress2"/>
+						<m:Button id="sap_Responsive_Page_0-footer-sap_m_Bar-1-contentRight-sap_m_Button-2" iconDensityAware="false" text="Reject" type="Reject"
+							iconFirst="true" width="auto" enabled="true" visible="true" press="_onButtonPress3"/>
+						<m:Button id="sap_Responsive_Page_0-footer-sap_m_Bar-1-contentRight-sap_m_Button-3" iconDensityAware="false" text="" type="Default"
+							icon="sap-icon://action" iconFirst="true" width="auto" enabled="true" visible="true"/>
+					</m:contentRight>
+				</m:Bar>
+			</m:footer>
+			<m:headerContent/>
+			<m:subHeader/>
+			<m:customHeader/>
+		</m:Page>
+	</u:Shell>
+</mvc:View>

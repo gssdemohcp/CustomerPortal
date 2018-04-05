@@ -1,0 +1,144 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="generated.app.controller.14786139239811909_S6" xmlns:m="sap.m"
+	xmlns:u="sap.ui.unified" xmlns:tnt="sap.tnt">
+	<u:Shell id="myShell" icon="{/logo}" headerVisible="true">
+		<u:headItems>
+			<u:ShellHeadItem tooltip="Configuration" icon="sap-icon://menu2" press="handlePressConfiguration"/>
+			<u:ShellHeadItem tooltip="Home" icon="/webapp/resources/logo.png" visible="true" press="handlePressHome"/>
+		</u:headItems>
+		<u:headEndItems>
+			<u:ShellHeadItem icon="sap-icon://log" tooltip="Logoff" press="handleLogoffPress"/>
+		</u:headEndItems>
+		<u:user>
+			<u:ShellHeadUserItem image="sap-icon://person-placeholder" username="GlobalSoft Inc" press="handleUserNamePress"/>
+		</u:user>
+		<u:search>
+			<m:Image tooltip="Home" src="/webapp/resources/logo.png" visible="true" id="logo"/>
+			<m:Title text="Customer Service Portal" textAlign="Center" titleStyle="H3"/>
+		</u:search>
+		<u:paneContent>
+			<tnt:SideNavigation id="sideNavigation">
+				<tnt:fixedItem>
+					<tnt:NavigationList>
+						<tnt:NavigationListItem text="Maintenance Plans" icon="sap-icon://wrench" select="handleLinkPress"/>
+						<tnt:NavigationListItem text="Open Tickets" icon="sap-icon://open-folder" select="_onStandardTilePress"></tnt:NavigationListItem>
+						<tnt:NavigationListItem text="In Process Tickets" icon="sap-icon://status-in-process" select="_onStandardTilePress1"></tnt:NavigationListItem>
+						<tnt:NavigationListItem text="Completed Tickets" icon="sap-icon://status-completed" select="_onStandardTilePress2"></tnt:NavigationListItem>
+						<tnt:NavigationListItem text="Asset Base" icon="sap-icon://building" select="_onImagePress"></tnt:NavigationListItem>
+						<!--<tnt:NavigationListItem text="Analytics" icon="sap-icon://line-chart"></tnt:NavigationListItem>-->
+						<!--<tnt:NavigationListItem text="Messages" icon="sap-icon://inbox"></tnt:NavigationListItem>-->
+					</tnt:NavigationList>
+				</tnt:fixedItem>
+			</tnt:SideNavigation>
+		</u:paneContent>
+		<m:Page id="sap_Responsive_Page_0" showHeader="true" title="Ticket Details" showFooter="false" showNavButton="true"
+			navButtonPress="_onPageNavButtonPress" class="page6">
+			<m:content>
+				<m:Text id="sap_Responsive_Page_0-content-sap_m_Text-1478614563716" text="3832" width="100%" maxLines="1" wrapping="false" textAlign="Begin"
+					textDirection="Inherit"/>
+				<m:Label id="sap_Responsive_Page_0-content-sap_m_Label-1478614587240" text="Description:" design="Standard" width="75.953125px"
+					required="false" textAlign="Begin" textDirection="Inherit"/>
+				<m:Text id="sap_Responsive_Page_0-content-sap_m_Text-1478614632849" text="Maintenance Plan" width="505px" maxLines="1" wrapping="false"
+					textAlign="Begin" textDirection="Inherit"/>
+				<m:Label id="sap_Responsive_Page_0-content-sap_m_Label-1478614720526" text="Priority:" design="Standard" width="53.953125px"
+					required="false" textAlign="Begin" textDirection="Inherit"/>
+				<m:Text id="sap_Responsive_Page_0-content-sap_m_Text-1478614749162" text="Normal" width="54px" maxLines="1" wrapping="false"
+					textAlign="Begin" textDirection="Inherit"/>
+				<m:Label id="sap_Responsive_Page_0-content-sap_m_Label-1478614817141" text="Product Description:" design="Standard" width="17%"
+					required="false" textAlign="Begin" textDirection="Inherit"/>
+				<m:Text id="sap_Responsive_Page_0-content-sap_m_Text-1478614850780" text="POWER_WHEEL_CHAIR" width="451px" maxLines="1" wrapping="false"
+					textAlign="Begin" textDirection="Inherit"/>
+				<m:Label id="sap_Responsive_Page_0-content-sap_m_Label-1478614955664" text="Assigned To:" design="Standard" width="88px" required="false"
+					textAlign="Begin" textDirection="Inherit"/>
+				<m:Text id="sap_Responsive_Page_0-content-sap_m_Text-1478615056497" text="Madhava Rao" width="97px" maxLines="1" wrapping="false"
+					textAlign="Begin" textDirection="Inherit"/>
+				<m:Label id="sap_Responsive_Page_0-content-sap_m_Label-1478615147638" text="Incident Category:" design="Standard" width="100%"
+					required="false" textAlign="Begin" textDirection="Inherit"/>
+				<m:Label id="sap_Responsive_Page_0-content-sap_m_Label-1478615170114" text="Escalation Status:" design="Standard" width="15%"
+					required="false" textAlign="Begin" textDirection="Inherit"/>
+				<m:Text id="sap_Responsive_Page_0-content-sap_m_Text-1478615213119" text="Not Escalated" width="85%" maxLines="1" wrapping="false"
+					textAlign="Begin" textDirection="Inherit"/>
+				<m:IconTabBar id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765" selectedKey="Ok" applyContentPadding="false"
+					expandable="false" expanded="true" backgroundDesign="Solid" upperCase="false" visible="true">
+					<m:items>
+						<m:IconTabFilter id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-1" iconDensityAware="false"
+							icon="sap-icon://hint" iconColor="Default" text="" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true"
+							visible="true">
+							<m:content>
+								<m:Label id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-1-content-sap_m_Label-1478681211876"
+									text="Serial ID:" design="Standard" width="65.078125px" required="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Text id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-1-content-sap_m_Text-1478681258487"
+									text="WH10009108" width="90%" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Label id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-1-content-sap_m_Label-1478681295221"
+									text="Warranty Description:" design="Standard" width="18%" required="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Text id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-1-content-sap_m_Text-1478681343558"
+									text="90 Day Warranty" width="82%" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Label id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-1-content-sap_m_Label-1478681408335"
+									text="Warranty From:" design="Standard" width="102.90625px" required="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Text id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-1-content-sap_m_Text-1478681471281"
+									text="7/1/16, 12:00 AM" width="85%" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Label id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-1-content-sap_m_Label-1478681509596"
+									text="Warranty To:" design="Standard" width="84.03125px" required="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Text id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-1-content-sap_m_Text-1478681571804"
+									text="9/29/16, 12:00 AM" width="88%" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Label id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-1-content-sap_m_Label-1478681600647"
+									text="Product:" design="Standard" width="58.03125px" required="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Text id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-1-content-sap_m_Text-1478681631948"
+									text="POWER_WHEEL_CHAIR" width="90%" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+							</m:content>
+						</m:IconTabFilter>
+						<m:IconTabFilter id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-3" iconDensityAware="false"
+							icon="sap-icon://time-entry-request" iconColor="Neutral" text="" count="" design="Vertical" showAll="false" textDirection="Inherit"
+							enabled="true" visible="true">
+							<m:content>
+								<m:Label id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-3-content-sap_m_Label-1478681737938"
+									text="Created On:" design="Standard" width="81.03125px" required="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Text id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-3-content-sap_m_Text-1478684166825"
+									text="2016-07-04T07:43:35.40Z" width="445.953125px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Label id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-3-content-sap_m_Label-1478684451351"
+									text="Initial Review Date:" design="Standard" width="123.109375px" required="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Text id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-3-content-sap_m_Text-1478684646236"
+									text="7/1/16, 12:00 AM" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Label id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-3-content-sap_m_Label-1478684753153"
+									text="Reported On:" design="Standard" width="527.03125px" required="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Label id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-3-content-sap_m_Label-1478684862828"
+									text="Last Customer Interaction:" design="Standard" width="230.140625px" required="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Label id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-3-content-sap_m_Label-1478684926966"
+									text="Reported By:" design="Standard" width="528.03125px" required="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Label id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-3-content-sap_m_Label-1478684962619"
+									text="Last Agent Interaction:" design="Standard" width="146.109375px" required="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Label id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-3-content-sap_m_Label-1478685022892"
+									text="Initial Response Date:" design="Standard" width="527.03125px" required="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Label id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-3-content-sap_m_Label-1478685073283"
+									text="Completion Date:" design="Standard" width="112.078125px" required="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Text id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-3-content-sap_m_Text-1478685121572"
+									text="9/29/16, 12:00 AM" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Label id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-3-content-sap_m_Label-1478685152802"
+									text="Escalated Status Text:" design="Standard" width="144.03125px" required="false" textAlign="Begin" textDirection="Inherit"/>
+								<m:Text id="sap_Responsive_Page_0-content-sap_m_IconTabBar-1478678608765-items-sap_m_IconTabFilter-3-content-sap_m_Text-1478685200692"
+									text="Not Escalated" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+							</m:content>
+						</m:IconTabFilter>
+					</m:items>
+					<m:content/>
+				</m:IconTabBar>
+			</m:content>
+			<m:footer>
+				<m:Bar id="sap_Responsive_Page_0-footer-sap_m_Bar-1" design="Auto">
+					<m:contentLeft/>
+					<m:contentMiddle/>
+					<m:contentRight>
+						<m:Button id="sap_Responsive_Page_0-footer-sap_m_Bar-1-contentRight-sap_m_Button-1" iconDensityAware="false" text="Approve" type="Accept"
+							iconFirst="true" width="auto" enabled="true" visible="true"/>
+						<m:Button id="sap_Responsive_Page_0-footer-sap_m_Bar-1-contentRight-sap_m_Button-2" iconDensityAware="false" text="Reject" type="Reject"
+							iconFirst="true" width="auto" enabled="true" visible="true"/>
+						<m:Button id="sap_Responsive_Page_0-footer-sap_m_Bar-1-contentRight-sap_m_Button-3" iconDensityAware="false" text="" type="Default"
+							icon="sap-icon://action" iconFirst="true" width="auto" enabled="true" visible="true"/>
+					</m:contentRight>
+				</m:Bar>
+			</m:footer>
+			<m:headerContent/>
+			<m:subHeader/>
+			<m:customHeader/>
+		</m:Page>
+	</u:Shell>
+</mvc:View>

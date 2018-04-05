@@ -1,0 +1,114 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema Namespace="308e304244de079f0ce5edb2" xml:lang="en" sap:schema-version="0000" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityContainer Name="308e304244de079f0ce5edb2_Entities" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="maintenanceSet" EntityType="308e304244de079f0ce5edb2.maintenance" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true"/>
+				<EntitySet Name="powerSet" EntityType="308e304244de079f0ce5edb2.power" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+				<EntitySet Name="microSet" EntityType="308e304244de079f0ce5edb2.micro" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+				<EntitySet Name="openSet" EntityType="308e304244de079f0ce5edb2.open" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+				<EntitySet Name="inprocessSet" EntityType="308e304244de079f0ce5edb2.inprocess" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true"/>
+				<EntitySet Name="competedSet" EntityType="308e304244de079f0ce5edb2.competed" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+				<EntitySet Name="allSet" EntityType="308e304244de079f0ce5edb2.all" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+				<EntitySet Name="ticketdetailsSet" EntityType="308e304244de079f0ce5edb2.ticketdetails" sap:creatable="true" sap:updatable="true"
+					sap:deletable="true"/>
+			</EntityContainer>
+			<EntityType Name="maintenance">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="CreationDate" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="CreationDate"/>
+				<Property Name="ServiceRequestLifeCycleStatusCodeText" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="ServiceRequestLifeCycleStatusCodeText"/>
+				<Property Name="SerialNo" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="SerialNo"/>
+				<Property Name="ProductID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ProductID"/>
+				<Property Name="ServiceTechnician" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="ServiceTechnician"/>
+			</EntityType>
+			<EntityType Name="power">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="SerialNo" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="SerialNo"/>
+				<Property Name="Status" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Status"/>
+				<Property Name="WarrantyFrom" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="WarrantyFrom"/>
+				<Property Name="WarrantyTo" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="WarrantyTo"/>
+			</EntityType>
+			<EntityType Name="micro">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="SerialID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="SerialID"/>
+				<Property Name="Status" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Status"/>
+				<Property Name="WarrantyFrom" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="WarrantyFrom"/>
+				<Property Name="WarrantyTo" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="WarrantyTo"/>
+			</EntityType>
+			<EntityType Name="open">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="ProductID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ProductID"/>
+				<Property Name="SerialID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="SerialID"/>
+				<Property Name="Status" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Status"/>
+			</EntityType>
+			<EntityType Name="inprocess">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="ProductID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ProductID"/>
+				<Property Name="SerialID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="SerialID"/>
+				<Property Name="Status" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Status"/>
+			</EntityType>
+			<EntityType Name="competed">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="ProductID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ProductID"/>
+				<Property Name="SerialID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="SerialID"/>
+				<Property Name="Status" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Status"/>
+			</EntityType>
+			<EntityType Name="all">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="ProductID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ProductID"/>
+				<Property Name="SerialID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="SerialID"/>
+				<Property Name="Status" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Status"/>
+			</EntityType>
+			<EntityType Name="ticketdetails">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+				<Property Name="Description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Description"/>
+				<Property Name="Priority" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Priority"/>
+				<Property Name="ProductDescription" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="ProductDescription"/>
+				<Property Name="AssignedTo" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="AssignedTo"/>
+				<Property Name="IncidentCategory" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="IncidentCategory"/>
+				<Property Name="EscalationStatus" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="EscalationStatus"/>
+				<Property Name="SerialID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="SerialID"/>
+				<Property Name="WarrantyDescription" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="WarrantyDescription"/>
+				<Property Name="WarrantyFrom" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="WarrantyDate"/>
+				<Property Name="WarrantyTo" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="WarrantyTo"/>
+				<Property Name="CreatedOn" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="CreatedOn"/>
+				<Property Name="ReportedOn" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ReportedOn"/>
+				<Property Name="ReportedBy" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ReportedBy"/>
+				<Property Name="InitialResponseDate" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true"
+					sap:label="InitialResponseDate"/>
+			</EntityType>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
